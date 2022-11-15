@@ -1,0 +1,15 @@
+<div class="cart-item">
+    <span>{{cartItem.productName}}</span> x 
+    <span>{{cartItem.qty}}</span>: 
+    <strong>{{cartItem.qty* cartItem.price | currency: "EUR"}}</strong><br>
+    <!-- <button type="button btn-remove" class="btn btn-sm btn-outline-secondary product-btn" (click)="removeFromCart()">Remove item</button> -->
+</div>
+
+<!-- <div class="cart-item">
+    <span>{{cartItem.productName}} - {{cartItem.price | currency: "EUR"}}</span><br>
+    <label>Item quantity</label>
+    <button type="button" class="quantity-button"><i class="fa fa-plus"></i></button>
+    <input type="text" [value]="cartItem.qty" style="width:20px; text-align: center;">
+    <button type="button" class="quantity-button"><i class="fa fa-minus"></i></button><br>
+    <strong style="margin-right: 3px;">Total: {{cartItem.qty* cartItem.price | currency: "EUR"}}</strong>
+</div> -->

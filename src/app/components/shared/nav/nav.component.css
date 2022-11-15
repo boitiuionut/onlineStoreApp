@@ -1,0 +1,10 @@
+.d-inline-flex :hover{
+    opacity: 70%;
+}
+.d-flex{
+    background-color: rgb(255, 255, 255);
+}
+
+.btn-outline-secondary{
+    color: rgb(193, 188, 188);
+}

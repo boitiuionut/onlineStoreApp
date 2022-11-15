@@ -1,0 +1,57 @@
+
+<div class="row">
+    <div class="col-md-4 offset-md-4">
+        <div class="guest-form-card card">
+            <div class="card-header text-center">
+                <h2 class="text-center mb-5">We are here to support you</h2>
+            </div>
+            <div class="card-body">
+                <form [formGroup]="supportForm" (ngSubmit)="submitMessage()">
+                    <div class="form-group">
+                        <label for="Email">Email</label>
+                        <input 
+                            id="email"
+                            type="email" 
+                            class="form-control"
+                            name="email"
+                            formControlName="email"
+                            placeholder="Enter email"
+                            [ngClass]="{'is-invalid': supportForm.get('email').touched && supportForm.get('email').invalid}"
+                        />
+                        <span class="invalid-feedback">
+                            <span *ngIf="supportForm.get('email').hasError('required')">Email can't be blank</span>
+                            <span *ngIf="supportForm.get('email').hasError('email')">Email must be valid</span>
+                        </span>
+                    </div>
+                    <div class="form-group">
+                        <label for="fullname">Full Name</label>
+                        <input
+                            id="fullname" 
+                            type="text" 
+                            class="form-control" 
+                            name="fullname"
+                            formControlName="fullname"
+                            placeholder="Full Name" 
+                            [ngClass]="{'is-invalid': supportForm.get('fullname').touched && supportForm.get('fullname').invalid}"
+                        />
+                        <span class="invalid-feedback">Fullname can't be blank</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea 
+                            class="form-control" 
+                            name="message"
+                            formControlName="message"
+                            id="textarea"
+                            rows="4"
+                            [ngClass]="{'is-invalid': supportForm.get('message').touched && supportForm.get('message').invalid}">
+                        </textarea>
+                        <span class="invalid-feedback">Message can't be blank</span>
+                    </div> 
+        
+                    <button type="submit" class="btn btn-primary btn-block mb-8" >Submit message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
